@@ -28,10 +28,11 @@ function exibeImagemDetalhes(result) {
 
   if (result.media_type === 'video') {
     console.log('é um vídeo!!');
-    $('#img').css('display', 'none');
+    $('#imagem-detalhes-div').css('display', 'none');
     
   } else {  
     $('#img').attr("src", result.url);
+    $('#imagem-detalhes-div').css('display', 'block') // Verificar se está funcionando depois. Projeto no pages subiu sem a tag img estar oculta 
     
   }
   $('#descricao-p').html(result.explanation);
